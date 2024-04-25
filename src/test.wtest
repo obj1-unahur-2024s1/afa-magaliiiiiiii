@@ -1,0 +1,29 @@
+import jugadores.*
+import afa.*
+import estadios.*
+
+test "costo del evento" {
+
+	assert.equals(10000000 + 5+20, afa.costoDelEvento())
+
+}
+
+test "costo en el monumental"{
+	afa.nuevoEstadio(monumental)
+	assert.equals(10000000 + 5+50, afa.costoDelEvento())
+	
+	
+}
+test "capacidad del monumental"{
+	assert.equals(550000 , monumental.capacidad())
+}
+
+test "capacidad del monumental +1 avance"{
+	monumental.nuevosAvances()
+	assert.equals(600000 , monumental.capacidad())
+}
+
+test "populaidad de mbappe a "{
+	mbappe.popularidad()
+	assert.equals( 62, mbappe.popularidad())
+}
